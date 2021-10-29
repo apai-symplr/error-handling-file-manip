@@ -13,8 +13,9 @@ Demo Covering Error Handling and File Manipulations in Clojure
 2. Run the project by using `Lein run`
 
 ## Files
-- `src/core.clj` covers main module along with various file operations
-- `src/jsonhandler.clj` covers modules for handling JSON data
+- `src/core.clj` core namespace calls main method to run methods in below namespaces
+- `src/jsonhandler.clj` namespace covers methods for handling JSON data in a file
+- `src/basicfilemethods.clj` namespace covers basic file i/o methods
 - `data.json` is the sample json file used in this tutorial for parsing
 - `text.txt` is a sample text file used for basic file operations 
 
