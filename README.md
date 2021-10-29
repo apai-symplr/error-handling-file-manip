@@ -1,36 +1,28 @@
-# errorfileproject
+# Error Handling and File Manipulation Tutorial in Clojure 
 
-FIXME: description
+Demo Covering Error Handling and File Manipulations in Clojure
 
-## Installation
+## Index
 
-Download from http://example.com/FIXME.
-
+- [Usage](#profiles)
+- [Files](#Files)
+- [FileOperations](#FileOperations)
+    
 ## Usage
+1. Project is build using Leiningen Clojure project management tool,Installation instructions can be found [here](https://leiningen.org/)
+2. Run the project by using `Lein run`
 
-FIXME: explanation
+## Files
+- `src/core.clj` covers main module along with various file operations
+- `src/jsonhandler.clj` covers modules for handling JSON data
+- `data.json` is the sample json file used in this tutorial for parsing
+- `text.txt` is a sample text file used for basic file operations 
 
-    $ java -jar errorfileproject-0.1.0-standalone.jar [args]
 
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
 
 ## License
 
-Copyright © 2021 FIXME
+Copyright © 2021 
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
