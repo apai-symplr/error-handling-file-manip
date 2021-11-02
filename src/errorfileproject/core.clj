@@ -1,10 +1,11 @@
 (ns errorfileproject.core
 (:require [clojure.java.io :as io]
+          [cheshire.core :refer :all]
           [errorfileproject.jsonhandler :as jsonhandler]
           [errorfileproject.basicfilemethods :as basicfile]
 )(:gen-class))
 
- 
+ ;main function which calls methods from another namespaces
 
 (defn -main
   [& args]
@@ -14,5 +15,6 @@
   ;(basicfile/copy-to-file "text.txt" "text2.txt")
   ;(basicfile/image-downloader "https://mma.prnewswire.com/media/742257/Tata_Elxsi_Logo.jpg?w=200" "elxsi.jpg")
   ;(println (basicfile/delete-any-file "text2.txt"))
-  ;(println ((jsonhandler/read-json "data.json")"quiz"))
-)
+  ;(jsonhandler/get-quiz-set "sport" "data.json")
+  (jsonhandler/add-quiz-set "computer" "data.json")
+  )

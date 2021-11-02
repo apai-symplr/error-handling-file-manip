@@ -6,7 +6,7 @@ Demo Covering Error Handling and File Manipulations in Clojure
 
 - [Usage](#profiles)
 - [Files](#Files)
-- [FileOperations](#FileOperations)
+- [FeaturesCovered](#FeaturesCovered)
     
 ## Usage
 1. Project is build using Leiningen Clojure project management tool,Installation instructions can be found [here](https://leiningen.org/)
@@ -21,17 +21,9 @@ Demo Covering Error Handling and File Manipulations in Clojure
 
 
 
-## License
-
-Copyright © 2021 
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+## Features Covered
+1. Cover Reading and Writing a File using slurp and spit operations.
+2. Use clojure.java.io library to check whether the file exist before reading and writing into a file.
+3. Go through every file operations methods in clojure.java.io 
+4. Then move to JSON handling
+5. Learn about filter, map, reduce for handling data collection
