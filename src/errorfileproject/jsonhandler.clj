@@ -24,5 +24,5 @@
 (defn add-quiz-set
 [category filename]
 (let [data (get (read-json filename) "quiz")]
- (generate-stream (merge {"quiz" (merge data {category {"q1" {"question" "Who owns Windows OS?" "options" ["Microsoft" "Google" "Apple"] "answer" "Microsoft"}}})}) (io/writer "data1.json"))
+ (generate-stream (merge {"quiz" (merge data {category {"q1" {"question" "Who owns Windows OS?" "options" ["Microsoft" "Google" "Apple"] "answer" "Microsoft"}}})}) (io/writer "data1.json"){:pretty true})
 ))

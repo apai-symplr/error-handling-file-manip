@@ -16,5 +16,5 @@
   ;(basicfile/image-downloader "https://mma.prnewswire.com/media/742257/Tata_Elxsi_Logo.jpg?w=200" "elxsi.jpg")
   ;(println (basicfile/delete-any-file "text2.txt"))
   ;(jsonhandler/get-quiz-set "sport" "data.json")
-  (jsonhandler/add-quiz-set "computer" "data.json")
+  (jsonhandler/add-quiz-set "computer" "data1.json")
   )
