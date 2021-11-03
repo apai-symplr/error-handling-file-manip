@@ -3,7 +3,7 @@
 )
 
 (defn read-text-file
- ;Read a text file and output it to console using slurp
+ "Read a text file and output it to console using slurp"
  [filename]
  ;Check if file exists for reading file else show a message stating file not found
   (if (.exists (io/as-file filename))
@@ -12,7 +12,7 @@
  )) 
 
  (defn save-to-text-file
- ;save data to file, where
+ "save data to file, where"
  ; :filename is name of file
  ; :data is data to be added
  ; :append flag can be used to append data to existing data in file
@@ -23,13 +23,13 @@
  ))
 
 (defn copy-to-file
-;copy data from one text file to another text file
+"copy data from one text file to another text file"
 [target-file dest-file]
 (io/copy (io/file target-file) (io/file dest-file))
 )
 
 (defn image-downloader
-;download image from provided URI
+"download image from provided URI"
 [uri file-name]
 (with-open [in (io/input-stream uri)
             out (io/output-stream file-name)]
@@ -37,7 +37,7 @@
 )
 
 (defn delete-any-file 
-;Delete any File
+"Delete any File"
 [file-name]
 (if (.exists (io/as-file file-name))
  (do (io/delete-file file-name) "File Deleted Successfully")
