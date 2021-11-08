@@ -31,8 +31,8 @@
   ;JSON File Operations (Done using JSON data in data.json )
   ;---------------------------
   
-  ; 1.Read a specific type of quiz
-  ;(jsonhandler/get-quiz-set "sport" "data.json")
+  ; 1.Get a specific type of quiz
+  ;(jsonhandler/get-quiz-set "sport" "data3.json")
   
   ; 2.Create a quiz of specific type and append it to existing quiz set
   ;(jsonhandler/add-quiz-set "computer" "data.json" {"q1" {"question" "Who owns Windows OS?" "options" ["Microsoft" "Google" "Apple"] "answer" "Microsoft"}})  
