@@ -6,7 +6,7 @@
 ;uses Cheshire Library to decode (change data into Clojure Primitives) takes a Reader type as input  
 (defn read-json 
 [file-name]
-"Function read-json is used to write JSON data :file-name argument takes the file-name"
+"Function read-json is used to read JSON File :file-name argument takes the file-name"
 (parse-stream (io/reader file-name))
 ) 
 

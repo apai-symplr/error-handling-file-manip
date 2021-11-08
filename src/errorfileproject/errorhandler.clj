@@ -1,7 +1,7 @@
 (ns errorfileproject.errorhandler)
-
+;For better understanding of go through this https://www.braveclojure.com/writing-macros/
 (defmacro safe
   [expression]
   `(try ~expression
      (catch Exception e#
-       (str "caught exception: " (.getMessage e#)))))
+       (println (str "caught exception: " (.getMessage e#))))))
