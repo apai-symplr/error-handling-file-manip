@@ -1,6 +1,7 @@
 (ns errorfileproject.jsonhandler
 (:require [cheshire.core :refer :all]
           [clojure.java.io :as io]
+          [errorfileproject.customexcep :as customexcep]
           [errorfileproject.errorhandler :as errorhandler]
 ))
 
@@ -10,6 +11,25 @@
 "Function read-json is used to read JSON File :file-name argument takes the file-name"
 (errorhandler/safe (parse-stream (io/reader file-name)))
 ) 
+
+(defn read-quiz-data
+"Read Data from console for creating a quiz for in a specific Category"
+;{"q1" {"question" "Who owns Windows OS?" "options" ["Microsoft" "Google" "Apple"] "answer" "Microsoft"}}
+[]
+(println "Enter the question")
+(def question (read-line))
+(def options [])
+(def x (atom true))
+(while (= @x true)
+(do 
+(println "Enter option")
+(conj options (read-line))
+(println "Continue? Y or N ?")
+(def op (read-line))
+(if (= op "Y") (reset! x false))
+))
+(errorhandler/safe {"q1" {"question" customexcep/validate-question "options" customexcep/validate-option "answer" customexcep/validate-answer}})
+)
 
 
 (defn get-quiz-set

@@ -39,4 +39,7 @@
   
   ; 3.Test error handling macro 
   ;(errorhandler/safe (jsonhandler/read-json "data1.json"))
+
+  ;4.Custom Exceptions
+  (jsonhandler/read-quiz-data)
   )
