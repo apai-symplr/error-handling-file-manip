@@ -28,7 +28,9 @@
 (def op (read-line))
 (if (= op "Y") (reset! x false))
 ))
-(errorhandler/safe {"q1" {"question" customexcep/validate-question "options" customexcep/validate-option "answer" customexcep/validate-answer}})
+(println "Enter the answer")
+(def answer (read-line))
+(errorhandler/safe (println {"q1" {"question" (customexcep/validate-question question) "options" (customexcep/validate-option options) "answer" (customexcep/validate-answer answer)}}))
 )
 
 
