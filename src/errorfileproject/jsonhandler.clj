@@ -18,6 +18,7 @@
 []
 (println "Enter the question")
 (def question (read-line))
+(errorhandler/safe (customexcep/validate-question question)) 
 (def options [])
 (def x (atom true))
 (while (= @x true)
@@ -26,11 +27,13 @@
 (conj options (read-line))
 (println "Continue? Y or N ?")
 (def op (read-line))
-(if (= op "Y") (reset! x false))
+(if (= op "N") (reset! x false))
 ))
+(errorhandler/safe (customexcep/validate-option options)) 
 (println "Enter the answer")
 (def answer (read-line))
-(errorhandler/safe (println {"q1" {"question" (customexcep/validate-question question) "options" (customexcep/validate-option options) "answer" (customexcep/validate-answer answer)}}))
+(errorhandler/safe (customexcep/validate-answer answer))
+;(errorhandler/safe (println {"q1" {"question" (customexcep/validate-question question) "options" (customexcep/validate-option options) "answer" (customexcep/validate-answer answer)}}))
 )
 
 
