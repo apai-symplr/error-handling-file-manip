@@ -1,15 +1,13 @@
 (ns errorfileproject.core
-(:require [clojure.java.io :as io]
-          [cheshire.core :refer :all]
-          [errorfileproject.jsonhandler :as jsonhandler]
-          [errorfileproject.basicfilemethods :as basicfile]
-)(:gen-class))
+(:require [errorfileproject.jsonhandler :as jsonhandler]
+          [errorfileproject.basicfilemethods :as basicfile])(:gen-class))
 
 
 (defn -main
-  [& args]
-   "Main function which calls methods from another namespaces"
   
+  "Main function which calls methods from another namespaces"
+  
+  [& args]
   ;Basic File Operations
   ;-----------------------
 
@@ -41,5 +39,5 @@
   ;(errorhandler/safe (jsonhandler/read-json "data1.json"))
 
   ;4.Custom Exceptions
-  (jsonhandler/read-quiz-data)
+  ;(jsonhandler/read-quiz-data)
   )
