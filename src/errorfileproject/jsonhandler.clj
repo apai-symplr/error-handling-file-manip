@@ -14,27 +14,12 @@
 
 (defn read-quiz-data
 "Read Data from console for creating a quiz for in a specific Category"
-;{"q1" {"question" "Who owns Windows OS?" "options" ["Microsoft" "Google" "Apple"] "answer" "Microsoft"}}
 []
-(println "Enter the question")
-(def question (read-line))
-(errorhandler/safe (customexcep/validate-question question)) 
-(def options [])
-(def x (atom true))
-(while (= @x true)
-(do 
-(println "Enter option")
-(conj options (read-line))
-(println "Continue? Y or N ?")
-(def op (read-line))
-(if (= op "N") (reset! x false))
-))
-(errorhandler/safe (customexcep/validate-option options)) 
-(println "Enter the answer")
-(def answer (read-line))
-(errorhandler/safe (customexcep/validate-answer answer))
-;(errorhandler/safe (println {"q1" {"question" (customexcep/validate-question question) "options" (customexcep/validate-option options) "answer" (customexcep/validate-answer answer)}}))
-)
+ 
+ (errorhandler/safe (customexcep/validate-question "Who Owns Windows?"))
+ (errorhandler/safe (customexcep/validate-option ["Microsoft"]))
+ (errorhandler/safe (customexcep/validate-answer "aasdad"))
+ )
 
 
 (defn get-quiz-set
