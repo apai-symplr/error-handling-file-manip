@@ -1,6 +1,8 @@
 (ns errorfileproject.basicfilemethods
-(:require [clojure.java.io :as io])
-)
+(:require [clojure.java.io :as io]
+          [clojure.string :as str])
+ (:import (java.io BufferedReader StringReader))
+ )
 
 (defn read-text-file
  "Read a text file and output it to console using slurp"
@@ -27,6 +29,27 @@
 [target-file dest-file]
 (io/copy (io/file target-file) (io/file dest-file))
 )
+
+(defn advanced-copy
+"Copy operation with append"
+ [first-file second-file append]
+ (if (= append true)
+  (do
+    (let [data (slurp first-file)]
+     (spit second-file data :append true)
+     )
+   )
+  (do copy-to-file (first-file second-file))
+  )
+ )
+
+(defn reverse-file-data
+ [file-name string]
+(with-open [rdr (io/reader file-name)]
+ (def data (line-seq rdr))
+ (println data)
+ )
+ )
 
 (defn image-downloader
 "download image from provided URI"

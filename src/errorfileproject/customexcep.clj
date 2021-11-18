@@ -2,6 +2,7 @@
 (:require [clojure.string :as cljstr]
           [clojure.spec.alpha :as s])
 (:gen-class :extends java.lang.Exception))
+
 ;https://stackoverflow.com/questions/3835331/custom-exceptions-in-clojure refer while creating custom exception
 (defn validate-question 
 [question]

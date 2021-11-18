@@ -25,10 +25,11 @@
 (defn get-quiz-set
 [category filename]
 "Returns quiz of specific category(can be sport or math or computer)"
+;use reduce keyword in 29
 (let [data (get (get (read-json filename) "quiz") category)]
 (if (nil? data)
 "Ooops value not found"
-(println (data))
+(println data)
 )))
 
 
