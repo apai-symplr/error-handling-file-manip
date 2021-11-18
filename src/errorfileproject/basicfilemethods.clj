@@ -1,7 +1,6 @@
 (ns errorfileproject.basicfilemethods
 (:require [clojure.java.io :as io]
           [clojure.string :as str])
- (:import (java.io BufferedReader StringReader))
  )
 
 (defn read-text-file
@@ -39,7 +38,7 @@
      (spit second-file data :append true)
      )
    )
-  (do copy-to-file (first-file second-file))
+  (copy-to-file first-file second-file)
   )
  )
 

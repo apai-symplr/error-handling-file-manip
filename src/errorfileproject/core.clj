@@ -19,12 +19,12 @@
   ;(println (basicfile/save-to-text-file "text2.txt" "Hello\nAgain\nMore Data" false))
 
   ;2.1 Extra File Manipulation
-   (errorhandler/safe (basicfile/reverse-file-data "text2.txt" "Hello"))
+  ;(errorhandler/safe (basicfile/reverse-file-data "text2.txt" "Hello"))
   ; 3.Copy content of one file to another
   ;(basicfile/copy-to-file "text.txt" "text2.txt")
 
   ;3.1.Copy File Content with some mod
-   (basicfile/advanced-copy "text2.txt" "text3.txt" true)
+  (basicfile/advanced-copy "text2.txt" "text3.txt" false)
 
   ; 4.Uses Reader and writer functions to read a binary file and write to file (Image Downloader) 
   ;(basicfile/image-downloader "https://mma.prnewswire.com/media/742257/Tata_Elxsi_Logo.jpg?w=200" "elxsi.jpg")
